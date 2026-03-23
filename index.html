@@ -299,6 +299,21 @@ footer .author { font-family: 'Orbitron', sans-serif; color: #000; text-shadow: 
     z-index: 2;
 }
 
+/* ---- OLED GLOW ---- */
+.oled-green  { border-color: #0f0 !important; box-shadow: 0 0 18px rgba(0,255,0,0.5), 0 0 40px rgba(0,255,0,0.2), inset 0 0 20px rgba(0,255,0,0.05) !important; animation: oledPulse-green 2.5s ease-in-out infinite alternate; }
+.oled-cyan   { border-color: #00d4ff !important; box-shadow: 0 0 18px rgba(0,212,255,0.5), 0 0 40px rgba(0,212,255,0.2), inset 0 0 20px rgba(0,212,255,0.05) !important; animation: oledPulse-cyan 2.5s ease-in-out infinite alternate; }
+.oled-yellow { border-color: #ffd700 !important; box-shadow: 0 0 18px rgba(255,215,0,0.5), 0 0 40px rgba(255,215,0,0.2), inset 0 0 20px rgba(255,215,0,0.05) !important; animation: oledPulse-yellow 2.5s ease-in-out infinite alternate; }
+.oled-purple { border-color: #B27FFF !important; box-shadow: 0 0 18px rgba(178,127,255,0.5), 0 0 40px rgba(178,127,255,0.2), inset 0 0 20px rgba(178,127,255,0.05) !important; animation: oledPulse-purple 2.5s ease-in-out infinite alternate; }
+.oled-blue   { border-color: #3ABEFF !important; box-shadow: 0 0 18px rgba(58,190,255,0.5), 0 0 40px rgba(58,190,255,0.2), inset 0 0 20px rgba(58,190,255,0.05) !important; animation: oledPulse-blue 2.5s ease-in-out infinite alternate; }
+.oled-orange { border-color: #ff8c00 !important; box-shadow: 0 0 18px rgba(255,140,0,0.5), 0 0 40px rgba(255,140,0,0.2), inset 0 0 20px rgba(255,140,0,0.05) !important; animation: oledPulse-orange 2.5s ease-in-out infinite alternate; }
+
+@keyframes oledPulse-green  { 0%{box-shadow:0 0 12px rgba(0,255,0,0.4),0 0 25px rgba(0,255,0,0.15),inset 0 0 15px rgba(0,255,0,0.04)} 100%{box-shadow:0 0 25px rgba(0,255,0,0.7),0 0 55px rgba(0,255,0,0.3),inset 0 0 25px rgba(0,255,0,0.08)} }
+@keyframes oledPulse-cyan   { 0%{box-shadow:0 0 12px rgba(0,212,255,0.4),0 0 25px rgba(0,212,255,0.15),inset 0 0 15px rgba(0,212,255,0.04)} 100%{box-shadow:0 0 25px rgba(0,212,255,0.7),0 0 55px rgba(0,212,255,0.3),inset 0 0 25px rgba(0,212,255,0.08)} }
+@keyframes oledPulse-yellow { 0%{box-shadow:0 0 12px rgba(255,215,0,0.4),0 0 25px rgba(255,215,0,0.15),inset 0 0 15px rgba(255,215,0,0.04)} 100%{box-shadow:0 0 25px rgba(255,215,0,0.7),0 0 55px rgba(255,215,0,0.3),inset 0 0 25px rgba(255,215,0,0.08)} }
+@keyframes oledPulse-purple { 0%{box-shadow:0 0 12px rgba(178,127,255,0.4),0 0 25px rgba(178,127,255,0.15),inset 0 0 15px rgba(178,127,255,0.04)} 100%{box-shadow:0 0 25px rgba(178,127,255,0.7),0 0 55px rgba(178,127,255,0.3),inset 0 0 25px rgba(178,127,255,0.08)} }
+@keyframes oledPulse-blue   { 0%{box-shadow:0 0 12px rgba(58,190,255,0.4),0 0 25px rgba(58,190,255,0.15),inset 0 0 15px rgba(58,190,255,0.04)} 100%{box-shadow:0 0 25px rgba(58,190,255,0.7),0 0 55px rgba(58,190,255,0.3),inset 0 0 25px rgba(58,190,255,0.08)} }
+@keyframes oledPulse-orange { 0%{box-shadow:0 0 12px rgba(255,140,0,0.4),0 0 25px rgba(255,140,0,0.15),inset 0 0 15px rgba(255,140,0,0.04)} 100%{box-shadow:0 0 25px rgba(255,140,0,0.7),0 0 55px rgba(255,140,0,0.3),inset 0 0 25px rgba(255,140,0,0.08)} }
+
 @media(max-width:600px){ .logo{font-size:2rem;} .feature-header{flex-direction:column;} .led-grid{grid-template-columns:1fr;} }
 </style>
 </head>
@@ -614,7 +629,7 @@ footer .author { font-family: 'Orbitron', sans-serif; color: #000; text-shadow: 
 <!-- TCM -->
 <div>
   <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:2px;color:var(--accent-green);text-shadow:0 0 8px var(--accent-green);margin-bottom:8px;text-align:center;">PAGE 1 — TCM</div>
-  <div style="background:#000;border:3px solid #222;border-radius:8px;padding:20px 22px;font-family:'Courier New',monospace;font-size:0.9rem;color:#fff;box-shadow:0 0 30px rgba(0,0,0,0.8),inset 0 0 20px rgba(0,255,0,0.04);position:relative;">
+  <div class="oled-green" style="background:#000;border:3px solid #0f0;border-radius:8px;padding:20px 22px;font-family:'Courier New',monospace;font-size:0.9rem;color:#fff;position:relative;">
     <div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:#0a0a0f;padding:0 10px;font-family:'Orbitron',sans-serif;font-size:0.55rem;color:var(--text-secondary);letter-spacing:2px;">OLED</div>
     <div style="text-align:center;font-size:1.1rem;font-weight:bold;margin-bottom:10px;color:#ff0000;text-shadow:0 0 8px #ff0000;">TCM</div>
     <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span>R2 Spam</span><span style="color:#555;">OFF</span></div>
@@ -627,7 +642,7 @@ footer .author { font-family: 'Orbitron', sans-serif; color: #000; text-shadow: 
 <!-- BO7-WZ -->
 <div>
   <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:2px;color:var(--accent-cyan);text-shadow:0 0 8px var(--accent-cyan);margin-bottom:8px;text-align:center;">PAGE 2 — BO7-WZ</div>
-  <div style="background:#000;border:3px solid #222;border-radius:8px;padding:20px 22px;font-family:'Courier New',monospace;font-size:0.9rem;color:#fff;box-shadow:0 0 30px rgba(0,0,0,0.8),inset 0 0 20px rgba(0,212,255,0.04);position:relative;">
+  <div class="oled-cyan" style="background:#000;border:3px solid #00d4ff;border-radius:8px;padding:20px 22px;font-family:'Courier New',monospace;font-size:0.9rem;color:#fff;position:relative;">
     <div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:#0a0a0f;padding:0 10px;font-family:'Orbitron',sans-serif;font-size:0.55rem;color:var(--text-secondary);letter-spacing:2px;">OLED</div>
     <div style="text-align:center;font-size:1.1rem;font-weight:bold;margin-bottom:10px;color:#00d4ff;text-shadow:0 0 8px #00d4ff;">BO7-WZ</div>
     <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span>Anti-Recoil</span><span style="color:#0f0;">ON</span></div>
@@ -641,7 +656,7 @@ footer .author { font-family: 'Orbitron', sans-serif; color: #000; text-shadow: 
 <!-- CW -->
 <div>
   <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:2px;color:var(--accent-yellow);text-shadow:0 0 8px var(--accent-yellow);margin-bottom:8px;text-align:center;">PAGE 3 — CW</div>
-  <div style="background:#000;border:3px solid #222;border-radius:8px;padding:20px 22px;font-family:'Courier New',monospace;font-size:0.9rem;color:#fff;box-shadow:0 0 30px rgba(0,0,0,0.8),inset 0 0 20px rgba(255,215,0,0.04);position:relative;">
+  <div class="oled-yellow" style="background:#000;border:3px solid #ffd700;border-radius:8px;padding:20px 22px;font-family:'Courier New',monospace;font-size:0.9rem;color:#fff;position:relative;">
     <div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:#0a0a0f;padding:0 10px;font-family:'Orbitron',sans-serif;font-size:0.55rem;color:var(--text-secondary);letter-spacing:2px;">OLED</div>
     <div style="text-align:center;font-size:1.1rem;font-weight:bold;margin-bottom:10px;color:#ffd700;text-shadow:0 0 8px #ffd700;">CW</div>
     <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span>DPAD Swap</span><span style="color:#555;">OFF</span></div>
@@ -652,7 +667,7 @@ footer .author { font-family: 'Orbitron', sans-serif; color: #000; text-shadow: 
 <!-- BO3 -->
 <div>
   <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:2px;color:var(--accent-purple);text-shadow:0 0 8px var(--accent-purple);margin-bottom:8px;text-align:center;">PAGE 4 — BO3</div>
-  <div style="background:#000;border:3px solid #222;border-radius:8px;padding:20px 22px;font-family:'Courier New',monospace;font-size:0.9rem;color:#fff;box-shadow:0 0 30px rgba(0,0,0,0.8),inset 0 0 20px rgba(178,127,255,0.04);position:relative;">
+  <div class="oled-purple" style="background:#000;border:3px solid #B27FFF;border-radius:8px;padding:20px 22px;font-family:'Courier New',monospace;font-size:0.9rem;color:#fff;position:relative;">
     <div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:#0a0a0f;padding:0 10px;font-family:'Orbitron',sans-serif;font-size:0.55rem;color:var(--text-secondary);letter-spacing:2px;">OLED</div>
     <div style="text-align:center;font-size:1.1rem;font-weight:bold;margin-bottom:10px;color:#B27FFF;text-shadow:0 0 8px #B27FFF;">BO3</div>
     <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span>R2 Hold</span><span style="color:#555;">OFF</span></div>
@@ -666,7 +681,7 @@ footer .author { font-family: 'Orbitron', sans-serif; color: #000; text-shadow: 
 <!-- 2K -->
 <div>
   <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:2px;color:var(--accent-blue);text-shadow:0 0 8px var(--accent-blue);margin-bottom:8px;text-align:center;">PAGE 5 — 2K</div>
-  <div style="background:#000;border:3px solid #222;border-radius:8px;padding:20px 22px;font-family:'Courier New',monospace;font-size:0.9rem;color:#fff;box-shadow:0 0 30px rgba(0,0,0,0.8),inset 0 0 20px rgba(58,190,255,0.04);position:relative;">
+  <div class="oled-blue" style="background:#000;border:3px solid #3ABEFF;border-radius:8px;padding:20px 22px;font-family:'Courier New',monospace;font-size:0.9rem;color:#fff;position:relative;">
     <div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:#0a0a0f;padding:0 10px;font-family:'Orbitron',sans-serif;font-size:0.55rem;color:var(--text-secondary);letter-spacing:2px;">OLED</div>
     <div style="text-align:center;font-size:1.1rem;font-weight:bold;margin-bottom:10px;color:#3ABEFF;text-shadow:0 0 8px #3ABEFF;">2K</div>
     <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span>Button Rhythm</span><span style="color:#0f0;">ON</span></div>
@@ -682,7 +697,7 @@ footer .author { font-family: 'Orbitron', sans-serif; color: #000; text-shadow: 
 <!-- ROBLOX -->
 <div>
   <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:2px;color:var(--accent-orange);text-shadow:0 0 8px var(--accent-orange);margin-bottom:8px;text-align:center;">PAGE 6 — ROBLOX</div>
-  <div style="background:#000;border:3px solid #222;border-radius:8px;padding:20px 22px;font-family:'Courier New',monospace;font-size:0.9rem;color:#fff;box-shadow:0 0 30px rgba(0,0,0,0.8),inset 0 0 20px rgba(255,140,0,0.04);position:relative;">
+  <div class="oled-orange" style="background:#000;border:3px solid #ff8c00;border-radius:8px;padding:20px 22px;font-family:'Courier New',monospace;font-size:0.9rem;color:#fff;position:relative;">
     <div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:#0a0a0f;padding:0 10px;font-family:'Orbitron',sans-serif;font-size:0.55rem;color:var(--text-secondary);letter-spacing:2px;">OLED</div>
     <div style="text-align:center;font-size:1.1rem;font-weight:bold;margin-bottom:10px;color:#ff8c00;text-shadow:0 0 8px #ff8c00;">ROBLOX</div>
     <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span>AutoClicker</span><span style="color:#555;">OFF</span></div>
@@ -693,7 +708,7 @@ footer .author { font-family: 'Orbitron', sans-serif; color: #000; text-shadow: 
 <!-- GTA -->
 <div>
   <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:2px;color:var(--accent-orange);text-shadow:0 0 8px var(--accent-orange);margin-bottom:8px;text-align:center;">PAGE 7 — GTA ONLINE</div>
-  <div style="background:#000;border:3px solid #222;border-radius:8px;padding:20px 22px;font-family:'Courier New',monospace;font-size:0.9rem;color:#fff;box-shadow:0 0 30px rgba(0,0,0,0.8),inset 0 0 20px rgba(255,140,0,0.04);position:relative;">
+  <div class="oled-orange" style="background:#000;border:3px solid #ff8c00;border-radius:8px;padding:20px 22px;font-family:'Courier New',monospace;font-size:0.9rem;color:#fff;position:relative;">
     <div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:#0a0a0f;padding:0 10px;font-family:'Orbitron',sans-serif;font-size:0.55rem;color:var(--text-secondary);letter-spacing:2px;">OLED</div>
     <div style="text-align:center;font-size:1.1rem;font-weight:bold;margin-bottom:10px;color:#ff8c00;text-shadow:0 0 8px #ff8c00;">GTA ONLINE</div>
     <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span>MK 2</span><span style="color:#555;">OFF</span></div>
